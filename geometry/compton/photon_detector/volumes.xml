@@ -13,7 +13,8 @@
   <materialref ref="Bialkali"/>
   <solidref ref="comptonPMTCathode_solid"/>
   <auxiliary auxtype="Color" auxvalue="#54545455"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4PMTCathode"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4PMTCathode"/>
+  <auxiliary auxtype="DetNo" auxvalue="1"/>
 </volume>
 
 <volume name="comptonPMT_glassSide_log">
@@ -26,6 +27,14 @@
   <materialref ref="Silica"/>
   <solidref ref="comptonPMT_glass_solid"/>
   <auxiliary auxtype="Color" auxvalue="#ABABAB22"/>
+</volume>
+
+<volume name="lead_tungstate_det_log">
+  <materialref ref="lead_tungstate"/>
+  <solidref ref="lead_tungstate_det_solid"/>
+  <auxiliary auxtype="Color" auxvalue="#9B111E77"/>
+  <auxiliary auxtype="SensDet" auxvalue="leadtunstate"/>
+  <auxiliary auxtype="DetNo" auxvalue="2"/>
 </volume>
 
 <volume name="comptonPMT_log">
@@ -54,13 +63,14 @@
 
   <auxiliary auxtype="Color" auxvalue="#ABABAB00"/>
 </volume>
-
+<!--
 <volume name="GSOCrystal_log">
   <materialref ref="G4_Galactic"/>
   <solidref ref="GSOCrystal_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E77"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
+-->
 
 <volume name="syncshield_log">
   <materialref ref="leadMaterial"/>
@@ -72,21 +82,21 @@
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector1_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E76"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 <volume name="compton_vacuum_detector2_log">
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector2_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E74"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 <volume name="compton_vacuum_detector3_log">
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector3_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E75"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 
@@ -94,7 +104,7 @@
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector4_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E73"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 
@@ -102,7 +112,7 @@
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector5_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E72"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 
@@ -110,7 +120,7 @@
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector6_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E72"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 
@@ -118,7 +128,7 @@
   <materialref ref="Air_vacuum"/>
   <solidref ref="compton_vacuum_detector7_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E72"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 
@@ -136,7 +146,7 @@
   <materialref ref="Air_vacuum"/>
   <solidref ref="GSOPMT_grease_solid"/>
   <auxiliary auxtype="Color" auxvalue="Yellow"/>
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 
@@ -144,6 +154,27 @@
   <materialref ref="Air_optical"/>
   <solidref ref="compton_photon_detector_solid"/>
 
+  <physvol name="lead_tungstate_det_phy1">
+    <volumeref ref="lead_tungstate_det_log"/>
+    <position name="lead_tungstate_det_position1" unit="mm" x="-30" y="-30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+  </physvol>
+
+  <physvol name="lead_tungstate_det_phy2">
+    <volumeref ref="lead_tungstate_det_log"/>
+    <position name="lead_tungstate_det_position" unit="mm" x="30" y="-30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+  </physvol>
+
+  <physvol name="lead_tungstate_det_phy3">
+    <volumeref ref="lead_tungstate_det_log"/>
+    <position name="lead_tungstate_det_position" unit="mm" x="-30" y="30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+  </physvol>
+
+  <physvol name="lead_tungstate_det_phy4">
+    <volumeref ref="lead_tungstate_det_log"/>
+    <position name="lead_tungstate_det_position" unit="mm" x="30" y="30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+  </physvol>
+
+<!--
   <physvol name="GSOCrystal_phy">
     <volumeref ref="GSOCrystal_log"/>
     <position name="GSOCrystal_position" unit="mm" x="0" y="0" z="-(compton_photon_detector_dimZ-150.0)/2.0"/>
@@ -158,7 +189,7 @@
     <volumeref ref="GSOPMT_grease_log"/>
     <position name="GSOPMT_grease_position" unit="mm" x="0" y="0" z="(compton_photon_detector_dimZ-(2*comptonPMT_dimZ+1.0))/2.0"/>
   </physvol>
-
+-->
   <!--
   <physvol name="GSOFoilWrap_phy">
     <volumeref ref="GSOFoilWrap_log"/>
@@ -318,7 +349,7 @@
   <physvol>
     <volumeref ref="styrofoam_log"/>
     <position name="styrofoam_position"
-              unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+Cover_to_shield_dimZ/2."/>
+              unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+(Cover_to_shield_dimZ-38.1)/2."/>
  </physvol>
   <auxiliary auxtype="Color" auxvalue="#00000000"/>
 </volume>
@@ -327,7 +358,7 @@
   <materialref ref="G4_Galactic"/>
   <solidref ref="jaw_solid"/>
   <!--  <auxiliary auxtype="Color" auxvalue="#00FFCD22"/> -->
-  <auxiliary auxtype="Sens_det" auxvalue="comptonG4Crystal"/>
+  <auxiliary auxtype="SensDet" auxvalue="comptonG4Crystal"/>
 </volume>
 
 <volume name="window_flange1_log">

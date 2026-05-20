@@ -43,7 +43,7 @@
 /compton/filename comptonout2.root
 /compton/seed 42
 
-/run/beamOn 2
+#/run/beamOn 2
 
 /vis/enable
 /vis/viewer/flush

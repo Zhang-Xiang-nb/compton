@@ -87,13 +87,14 @@
       <auxiliary auxtype="DetNo" auxvalue="303"/>
   </volume>
 
+<!--
   <volume name="weldmend_3_exit">
       <materialref ref="G4_Galactic" />
       <solidref ref="thin_disc" />
       <auxiliary auxtype="SensDet" auxvalue="planeDet" />
       <auxiliary auxtype="DetNo" auxvalue="304"/>
   </volume>
-
+-->
 
   <volume name="weldmend_US_lower_entry">
       <materialref ref="G4_Galactic" />
@@ -142,6 +143,27 @@
       <solidref ref="thin_disc" />
       <auxiliary auxtype="SensDet" auxvalue="planeDet" />
      <auxiliary auxtype="DetNo" auxvalue="15"/>
+  </volume>
+
+  <volume name="Photonfront_before_shield" >
+      <materialref ref="G4_Galactic" />
+      <solidref ref="thin_disc" />
+      <auxiliary auxtype="SensDet" auxvalue="planeDet" />
+     <auxiliary auxtype="DetNo" auxvalue="20"/>
+  </volume>
+  
+  <volume name="Photonfront_after_shield" >
+      <materialref ref="G4_Galactic" />
+      <solidref ref="thin_disc" />
+      <auxiliary auxtype="SensDet" auxvalue="planeDet" />
+     <auxiliary auxtype="DetNo" auxvalue="21"/>
+  </volume>
+
+  <volume name="Photon_after_lead_tungstate" >
+      <materialref ref="G4_Galactic" />
+      <solidref ref="thin_disc" />
+      <auxiliary auxtype="SensDet" auxvalue="planeDet" />
+     <auxiliary auxtype="DetNo" auxvalue="22"/>
   </volume>
 
   &vols;
@@ -224,7 +246,7 @@
         <volumeref ref="midway_dipole_three_ed" />
         <position  unit="mm" x="0" y="0" z="5552.38" />
       </physvol>
-
+<!--
       <physvol>
         <volumeref ref="weldmend_US_lower_entry" />
         <position  unit="mm" x="0" y="0" z="4265.00" />
@@ -242,7 +264,7 @@
         <volumeref ref="weldmend_3_exit" />
         <position  unit="mm" x="0" y="0" z="2346.92" />
       </physvol>
-
+-->
       <physvol name="strip_PV">
         <volumeref ref="strip_vp" />
         <position  unit="mm" x="0" y="215.4936" z="6057.41" />
@@ -252,17 +274,31 @@
         <volumeref ref="strip_vp_back" />
         <position  unit="mm" x="0" y="215.4936" z="6060.41" />
       </physvol>
-
+<!--
       <physvol name="VRVP_phy">
         <volumeref ref="VRight_vp" />
         <position  unit="mm" x="0" y="0" z="165.12*25.4" />
       </physvol>
-
+-->
       <physvol name="TVP_phy">
         <volumeref ref="Third_vp" />
         <position unit="mm" x="0" y="215" z="7800" />
       </physvol>
 
+      <physvol name="Photonfront_before_shield_phy">
+        <volumeref ref="Photonfront_before_shield" />
+        <position unit="mm" x="0" y="0" z="5564+298.125-119.025+38.1" />
+      </physvol>
+
+      <physvol name="Photonfront_after_shield_phy">
+        <volumeref ref="Photonfront_after_shield" />
+        <position unit="mm" x="0" y="0" z="5564+298.125" />
+      </physvol>
+
+      <physvol name="Photon_after_lead_tungstate_phy">
+        <volumeref ref="Photon_after_lead_tungstate" />
+        <position unit="mm" x="0" y="0" z="5564+298.125+200" />
+      </physvol>
       <!--
       &phyvols;
       -->
