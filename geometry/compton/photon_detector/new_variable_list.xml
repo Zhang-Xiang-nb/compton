@@ -22,7 +22,7 @@
 <variable name="Styrofoam_thickness" value="13.36" />
 
 <variable name="comptonPMT_dimR_min" value="0.0" />
-<variable name="comptonPMT_dimR_max" value="81" />
+<variable name="comptonPMT_dimR_max" value="40.25" />
 <variable name="comptonPMT_dimZ" value="205.00" />
 
 <variable name="compton_photon_detector_dimX" value="2*comptonPMT_dimR_max" />
@@ -53,7 +53,8 @@
 <variable name="Al_shield_to_sync" value="21.1" />
 <variable name="shields_dimX" value="compton_photon_detector_dimX"/>
 <variable name="shields_dimY" value="compton_photon_detector_dimY"/>
-<variable name="shields_dimZ" value="Copper_shield_dimZ+LEDSpace_dimZ+AlCover_dimZ+Cover_to_shield_dimZ+Al_shield_dimZ-38.1"/>
+<!--<variable name="shields_dimZ" value="Copper_shield_dimZ+LEDSpace_dimZ+AlCover_dimZ+Cover_to_shield_dimZ+Al_shield_dimZ-38.1"/>  -->
+<variable name="shields_dimZ" value="Copper_shield_dimZ+LEDSpace_dimZ+AlCover_dimZ+Cover_to_shield_dimZ+Al_shield_dimZ"/>
 
 <variable name="thin_lead1_dimX" value="103." />
 <variable name="thin_lead1_dimY" value="176." />

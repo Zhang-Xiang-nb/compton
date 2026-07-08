@@ -33,7 +33,7 @@
   <materialref ref="lead_tungstate"/>
   <solidref ref="lead_tungstate_det_solid"/>
   <auxiliary auxtype="Color" auxvalue="#9B111E77"/>
-  <auxiliary auxtype="SensDet" auxvalue="leadtunstate"/>
+  <auxiliary auxtype="SensDet" auxvalue="leadtungstate"/>
   <auxiliary auxtype="DetNo" auxvalue="2"/>
 </volume>
 
@@ -156,22 +156,22 @@
 
   <physvol name="lead_tungstate_det_phy1">
     <volumeref ref="lead_tungstate_det_log"/>
-    <position name="lead_tungstate_det_position1" unit="mm" x="-30" y="-30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+    <position name="lead_tungstate_det_position1" unit="mm" x="-15" y="-15" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
   </physvol>
 
   <physvol name="lead_tungstate_det_phy2">
     <volumeref ref="lead_tungstate_det_log"/>
-    <position name="lead_tungstate_det_position" unit="mm" x="30" y="-30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+    <position name="lead_tungstate_det_position" unit="mm" x="15" y="-15" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
   </physvol>
 
   <physvol name="lead_tungstate_det_phy3">
     <volumeref ref="lead_tungstate_det_log"/>
-    <position name="lead_tungstate_det_position" unit="mm" x="-30" y="30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+    <position name="lead_tungstate_det_position" unit="mm" x="-15" y="15" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
   </physvol>
 
   <physvol name="lead_tungstate_det_phy4">
     <volumeref ref="lead_tungstate_det_log"/>
-    <position name="lead_tungstate_det_position" unit="mm" x="30" y="30" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
+    <position name="lead_tungstate_det_position" unit="mm" x="15" y="15" z="-(compton_photon_detector_dimZ-200.0)/2.0"/>
   </physvol>
 
 <!--
@@ -348,8 +348,10 @@
   </physvol>
   <physvol>
     <volumeref ref="styrofoam_log"/>
+    <!-- <position name="styrofoam_position"
+              unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+(Cover_to_shield_dimZ-38.1)/2."/>-->
     <position name="styrofoam_position"
-              unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+(Cover_to_shield_dimZ-38.1)/2."/>
+              unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+(Cover_to_shield_dimZ)/2."/>
  </physvol>
   <auxiliary auxtype="Color" auxvalue="#00000000"/>
 </volume>
