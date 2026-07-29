@@ -27,7 +27,7 @@
 
 <variable name="compton_photon_detector_dimX" value="2*comptonPMT_dimR_max" />
 <variable name="compton_photon_detector_dimY" value="2*comptonPMT_dimR_max" />
-<variable name="compton_photon_detector_dimZ" value="comptonPMT_dimZ+air_gap+1+air_gap+200" />
+<variable name="compton_photon_detector_dimZ" value="comptonPMT_dimZ+air_gap+1+air_gap+200" /> <!-- 406-->
 <variable name="dim_photon_det_containerZ" value="comptonPMT_dimZ+air_gap+1+air_gap+200" /> <!-- 406-->
 <variable name="dim_photon_det_worldX" value="5*dim_col_max_radius" />
 <variable name="dim_photon_det_worldY" value="5*dim_col_max_radius" />
@@ -46,15 +46,16 @@
 
 <variable name="Hollow_tube_radius" value="0.375*25.4"/>
 <variable name="Copper_shield_dimZ" value="0.25*25.4"/>
-<variable name="LEDSpace_dimZ" value="28"/>
+<!-- <variable name="LEDSpace_dimZ" value="28"/> -->
+<variable name="LEDSpace_dimZ" value="1"/>
 <variable name="AlCover_dimZ" value="18"/>
-<variable name="Cover_to_shield_dimZ" value="2.5*25.4"/>
+<variable name="Cover_to_shield_dimZ" value="2*25.4"/>
 <variable name="Al_shield_dimZ" value="0.125*25.4"/>
 <variable name="Al_shield_to_sync" value="21.1" />
 <variable name="shields_dimX" value="compton_photon_detector_dimX"/>
 <variable name="shields_dimY" value="compton_photon_detector_dimY"/>
 <!--<variable name="shields_dimZ" value="Copper_shield_dimZ+LEDSpace_dimZ+AlCover_dimZ+Cover_to_shield_dimZ+Al_shield_dimZ-38.1"/>  -->
-<variable name="shields_dimZ" value="Copper_shield_dimZ+LEDSpace_dimZ+AlCover_dimZ+Cover_to_shield_dimZ+Al_shield_dimZ"/>
+<variable name="shields_dimZ" value="Copper_shield_dimZ+LEDSpace_dimZ+AlCover_dimZ+Cover_to_shield_dimZ+Al_shield_dimZ"/> <!-- 79.325 -->
 
 <variable name="thin_lead1_dimX" value="103." />
 <variable name="thin_lead1_dimY" value="176." />

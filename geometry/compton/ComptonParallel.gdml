@@ -287,7 +287,8 @@
 
       <physvol name="Photonfront_before_shield_phy">
         <volumeref ref="Photonfront_before_shield" />
-        <position unit="mm" x="0" y="0" z="5564+298.125-119.025+38.1" />
+        <!--<position unit="mm" x="0" y="0" z="5564+298.125-119.025+38.1" />-->
+        <position unit="mm" x="0" y="0" z="5564+704.125-406-79.325-2-54.125+7.5" />
       </physvol>
 
       <physvol name="Photonfront_after_shield_phy">

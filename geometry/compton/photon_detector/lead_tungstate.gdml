@@ -11,13 +11,13 @@
 <physvol name="tungsten_fingers_phy">
   <volumeref ref="tungsten_fingers_log" />
   <!-- <position name="pos_TFs" unit="mm" x="compton_photon_detector_posX" y="compton_photon_detector_posY" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-38.1-tungsten_finger_dimZ/2.+100"/> -->
-  <position name="pos_TFs" unit="mm" x="compton_photon_detector_posX" y="compton_photon_detector_posY" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ/2.+100"/>
+  <position name="pos_TFs" unit="mm" x="compton_photon_detector_posX" y="compton_photon_detector_posY" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ/2"/>
 </physvol>
 
 <physvol name="tungsten_fingers_scintillator_phy">
   <volumeref ref="tungsten_fingers_scintillator_log" />
   <!-- <position name="pos_TFs_scintillator" unit="mm" x="compton_photon_detector_posX" y="compton_photon_detector_posY" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-38.1-10/2.+115"/> -->
-  <position name="pos_TFs_scintillator" unit="mm" x="compton_photon_detector_posX" y="compton_photon_detector_posY" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-10/2.+115"/>
+  <position name="pos_TFs_scintillator" unit="mm" x="compton_photon_detector_posX" y="compton_photon_detector_posY" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-10/2."/>
 </physvol>
 
 <physvol name="jaw1_phy">
@@ -30,3 +30,7 @@
   <position name="pos_jaw2" unit="mm" x="0" y="-jawY_pos" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers-jaw_dimZ/2."/>
 </physvol>
 
+<physvol name="lead_shield_phy">
+  <volumeref ref="lead_shield_log" />
+  <position name="pos_lead_shield" unit="mm" x="0" y="0" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers+7.5/2." />
+</physvol>

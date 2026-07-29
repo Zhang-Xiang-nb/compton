@@ -328,6 +328,12 @@
   <auxiliary auxtype="Color" auxvalue="#0000FF22"/>
 </volume>
 
+<volume name="lead_shield_log">
+  <materialref ref="leadMaterial"/>
+  <solidref ref="lead_shield"/>
+  <auxiliary auxtype="Color" auxvalue="#0000FF22"/>
+</volume>
+
 <volume name="shields_log">
   <materialref ref="Air"/>
   <solidref ref="shields_solid"/>

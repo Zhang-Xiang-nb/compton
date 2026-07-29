@@ -31,10 +31,10 @@
 <box lunit="mm" name="tungsten_fingers_scintillator_solid" x="shields_dimX" y="shields_dimY" z="10" />
 
 <box lunit="mm" name="lead_tungstate_det_solid" x="30" y="30" z="200" />
-
-<box lunit="mm" name="shields_solid" x="shields_dimX" y="shields_dimY" z="shields_dimZ" />
+<box lunit="mm" name="lead_shield" x="shields_dimX" y="shields_dimY" z="7.5" />
+<box lunit="mm" name="shields_solid" x="shields_dimX" y="shields_dimY" z="shields_dimZ" />  
 <!-- <box lunit="mm" name="styrofoam" x="shields_dimX" y="shields_dimY" z="Cover_to_shield_dimZ-38.1" /> -->
-<box lunit="mm" name="styrofoam" x="shields_dimX" y="shields_dimY" z="Cover_to_shield_dimZ-38.1" />
+<box lunit="mm" name="styrofoam" x="shields_dimX" y="shields_dimY" z="Cover_to_shield_dimZ" />
 
 <box lunit="mm" name="Copper_shield_solid" x="shields_dimX" y="shields_dimY" z="Copper_shield_dimZ" />
 <tube lunit="mm" name="CopperCut_solid" rmin="0." rmax="Hollow_tube_radius" z="Copper_shield_dimZ" startphi="0" deltaphi="360" aunit="degree" />
