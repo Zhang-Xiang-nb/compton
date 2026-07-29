@@ -49,7 +49,7 @@
 <!-- <variable name="LEDSpace_dimZ" value="28"/> -->
 <variable name="LEDSpace_dimZ" value="1"/>
 <variable name="AlCover_dimZ" value="18"/>
-<variable name="Cover_to_shield_dimZ" value="2*25.4"/>
+<variable name="Cover_to_shield_dimZ" value="5*25.4"/>
 <variable name="Al_shield_dimZ" value="0.125*25.4"/>
 <variable name="Al_shield_to_sync" value="21.1" />
 <variable name="shields_dimX" value="compton_photon_detector_dimX"/>
