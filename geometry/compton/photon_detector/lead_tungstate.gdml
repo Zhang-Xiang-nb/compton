@@ -22,15 +22,15 @@
 
 <physvol name="jaw1_phy">
   <volumeref ref="jaw_log" />
-  <position name="pos_jaw1" unit="mm" x="0" y="jawY_pos" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers-jaw_dimZ/2.+10"/>
+  <position name="pos_jaw1" unit="mm" x="0" y="jawY_pos" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers-jaw_dimZ/2."/>
 </physvol>
 
 <physvol name="jaw2_phy">
   <volumeref ref="jaw_log" />
-  <position name="pos_jaw2" unit="mm" x="0" y="-jawY_pos" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers-jaw_dimZ/2.+10"/>
+  <position name="pos_jaw2" unit="mm" x="0" y="-jawY_pos" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers-jaw_dimZ/2."/>
 </physvol>
 
 <physvol name="lead_shield_phy">
   <volumeref ref="lead_shield_log" />
-  <position name="pos_lead_shield" unit="mm" x="0" y="0" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers+7.5/2.+10" />
+  <position name="pos_lead_shield" unit="mm" x="0" y="0" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers+7.5/2." />
 </physvol>
