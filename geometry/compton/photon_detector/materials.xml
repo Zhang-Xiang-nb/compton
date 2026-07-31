@@ -6,6 +6,19 @@
   <atom value="1.00794" unit="g/mole" />
 </element>
 
+<element Z="26" formula="Fe" name="Iron" >
+  <atom unit="g/mole" value="55.845"/>
+</element>
+
+<element Z="24" formula="Cr" name="Chromium" >
+  <atom unit="g/mole" value="51.9961"/>
+</element>
+
+<element Z="28" formula="Ni" name="Nickel" >
+  <atom unit="g/mole" value="58.6934"/>
+</element>
+
+
 <element Z="6" formula="C" name="Carbon" >
   <atom value="12.011" unit="g/mole" />
 </element>
@@ -60,14 +73,18 @@
 </element>
 
 
-<material Z="29" name="Polystyrene" state="solid" >
-  <D unit="g/cm3" value="8.96" />
-  <atom unit="g/mole" value="63.546" />
+<material name="Polystyrene" state="solid">
+  <D unit="g/cm3" value="0.030"/>
+  <composite n="8" ref="Carbon"/>
+  <composite n="8" ref="Hydrogen"/>
 </material>
 
-<material Z="29" name="StainlessSteel" state="solid" >
-  <D unit="g/cm3" value="8.96" />
-  <atom unit="g/mole" value="63.546" />
+<material name="StainlessSteel" state="solid">
+  <D unit="g/cm3" value="8.0"/>
+
+  <fraction n="0.74" ref="Iron"/>
+  <fraction n="0.18" ref="Chromium"/>
+  <fraction n="0.08" ref="Nickel"/>
 </material>
 
 

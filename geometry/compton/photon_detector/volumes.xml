@@ -352,13 +352,13 @@
     <position name="Al_shield_position"
               unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ/2."/>
   </physvol>
+  
   <physvol>
     <volumeref ref="styrofoam_log"/>
-    <!-- <position name="styrofoam_position"
-              unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+(Cover_to_shield_dimZ-38.1)/2."/>-->
     <position name="styrofoam_position"
               unit="mm" x="0" y="0" z="-shields_dimZ/2.+Al_shield_dimZ+(Cover_to_shield_dimZ)/2."/>
- </physvol>
+  </physvol>
+
   <auxiliary auxtype="Color" auxvalue="#00000000"/>
 </volume>
 <!-- End: _shields -->
