@@ -36,7 +36,7 @@
         <position name="pos_photon_det_collimator" unit="mm" x="7.0" y="0" z="dim_col_thick/2." />
       </physvol>
 
-      <physvol name="phys_BP_window2">
+    <!-- <physvol name="phys_BP_window2">
         <volumeref ref="BP_window2_log" />
         <position name="pos_BP2_window" unit="mm" x="0" y="0" z="-col_toBP_window-BP_window_thickness-2*606.171-0.5/2" />
       </physvol>
@@ -50,6 +50,7 @@
         <volumeref ref="BP_window4_log" />
         <position name="pos_BP4_window" unit="mm" x="0" y="0" z="-col_toBP_window-3*BP_window_thickness-2*606.171-2*130.683-2*418.1221-0.5/2" />
       </physvol>
+    -->
 
       <physvol name="phys_window_flange1">
         <volumeref ref="window_flange1_log" />
@@ -101,11 +102,12 @@
         <volumeref ref="BP3_log" />
         <position name="pos_BP1" unit="mm" x="0" y="0" z="-col_toBP_window-3*BP_window_thickness-2*606.171-2*130.683-418.1221" />
       </physvol>
+      <!--
       <physvol name="syncshield">
         <volumeref ref="syncshield_log" />
         <position name="syncshield_position" unit="mm" x="0" y="0" z="297.0" />
       </physvol>
-
+      -->
       &leadtungstate;
       <auxiliary auxtype="Color" auxvalue="#ABCDEF22" />
     </volume>

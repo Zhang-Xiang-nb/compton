@@ -1,6 +1,6 @@
 <!-- new_variable_list for photon detector -->
 
-<position name="center" x="0" y="0" z="6000" unit="mm" />
+<position name="center" x="0" y="0" z="0" unit="mm" />
 
 <variable name="compton_photon_detector_posZ" value="6000" />
 <variable name="compton_photon_detector_posY" value="0" />
@@ -22,7 +22,7 @@
 <variable name="Styrofoam_thickness" value="13.36" />
 
 <variable name="comptonPMT_dimR_min" value="0.0" />
-<variable name="comptonPMT_dimR_max" value="40.25" />
+<variable name="comptonPMT_dimR_max" value="39" />
 <variable name="comptonPMT_dimZ" value="205.00" />
 
 <variable name="compton_photon_detector_dimX" value="2*comptonPMT_dimR_max" />
@@ -44,12 +44,13 @@
 <variable name="tungsten_finger_dimZ" value="2" />
 <variable name="fingerto_center" value="20" />
 
+<variable name="Hollow_box_dimX" value="64" />
 <variable name="Hollow_tube_radius" value="0.375*25.4"/>
 <variable name="Copper_shield_dimZ" value="0.25*25.4"/>
 <!-- <variable name="LEDSpace_dimZ" value="28"/> -->
-<variable name="LEDSpace_dimZ" value="1"/>
+<variable name="LEDSpace_dimZ" value="28"/>
 <variable name="AlCover_dimZ" value="18"/>
-<variable name="Cover_to_shield_dimZ" value="2*25.4"/>
+<variable name="Cover_to_shield_dimZ" value="49"/>
 <variable name="Al_shield_dimZ" value="0.125*25.4"/>
 <variable name="Al_shield_to_sync" value="21.1" />
 <variable name="shields_dimX" value="compton_photon_detector_dimX"/>
@@ -125,3 +126,4 @@
 
 <matrix name="TedlarEfficiency" coldim="2"
     values="1.7*eV 0.85 5.0*eV 0.85" />
+

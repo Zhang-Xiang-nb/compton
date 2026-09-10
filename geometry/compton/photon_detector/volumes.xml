@@ -304,6 +304,13 @@
 
 <!-- End: _tungsten _finger scintillators -->
 <!-- _shields 7/25/16 -->
+
+<volume name="CopperFrame_log">
+  <materialref ref="Copper"/>
+  <solidref ref="CopperFrameSolid"/>
+  <auxiliary auxtype="Color" auxvalue="#FFFFCD22"/>
+</volume>
+
 <volume name="Copper_log">
   <materialref ref="Copper"/>
   <solidref ref="sol_Copper_shield"/>
@@ -341,6 +348,11 @@
     <volumeref ref="Copper_log"/>
     <position name="Copper_position"
               unit="mm" x="0" y="0" z="shields_dimZ/2.-Copper_shield_dimZ/2."/>
+  </physvol>
+  <physvol>
+    <volumeref ref="CopperFrame_log"/>
+    <position name="CopperFrame_position"
+              unit="mm" x="0" y="0" z="shields_dimZ/2.-Copper_shield_dimZ-LEDSpace_dimZ/2."/>
   </physvol>
   <physvol>
     <volumeref ref="AlCover_log"/>
@@ -452,4 +464,3 @@
   <solidref ref="BP3"/>
   <auxiliary auxtype="Color" auxvalue="#0000FF22"/>
 </volume>
-

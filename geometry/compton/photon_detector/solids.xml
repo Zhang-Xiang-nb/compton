@@ -90,3 +90,32 @@
 <tube name="BP3" lunit="mm" aunit="degree" rmin="0.87*25.4/2" rmax="1.0*25.4/2" z="32.923*25.4" startphi="0" deltaphi="360" />
 <tube name="window_flange" lunit="mm" aunit="degree" rmin="1.5*25.4/2" rmax="2.75*25.4/2" z="0.25*25.4" startphi="0" deltaphi="360" />
 
+
+
+<!-- Outer copper square: 7.8 cm x 7.8 cm -->
+<box name="CopperOuter"
+      x="compton_photon_detector_dimX"
+      y="compton_photon_detector_dimY"
+      z="LEDSpace_dimZ"
+      lunit="mm"/>
+
+<!-- Center square hole: 6.4 cm x 6.4 cm -->
+<!-- Make z a little thicker than the copper plate -->
+<box name="CopperHole"
+      x="Hollow_box_dimX"
+      y="Hollow_box_dimX"
+      z="LEDSpace_dimZ+0.1"
+      lunit="mm"/>
+
+<!-- Copper frame = outer square - center hole -->
+<subtraction name="CopperFrameSolid">
+  <first ref="CopperOuter"/>
+  <second ref="CopperHole"/>
+
+  <position name="CopperHolePos"
+            x="0"
+            y="0"
+            z="0"
+            unit="mm"/>
+</subtraction>
+

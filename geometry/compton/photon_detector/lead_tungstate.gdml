@@ -31,8 +31,8 @@
 </physvol>
 
 
-<physvol name="lead_shield_phy">
+<!--<physvol name="lead_shield_phy">
   <volumeref ref="lead_shield_log" />
   <position name="pos_lead_shield" unit="mm" x="0" y="0" z="dim_photon_det_worldZ-compton_photon_detector_dimZ-shields_dimZ-tungsten_finger_dimZ-jaw_to_fingers+7.5/2." />
 </physvol> 
-
+-->

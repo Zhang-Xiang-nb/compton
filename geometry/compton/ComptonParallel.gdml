@@ -109,6 +109,13 @@
       <auxiliary auxtype="SensDet" auxvalue="planeDet" />
       <auxiliary auxtype="DetNo" auxvalue="306"/>
   </volume>
+  
+  <volume name="before_vaccum_window" >
+      <materialref ref="G4_Galactic" />
+      <solidref ref="thin_disc" />
+      <auxiliary auxtype="SensDet" auxvalue="planeDet" />
+      <auxiliary auxtype="DetNo" auxvalue="18"/>
+  </volume>
 
   <volume name="orig_vp" >
       <materialref ref="G4_Galactic" />
@@ -144,6 +151,14 @@
       <auxiliary auxtype="SensDet" auxvalue="planeDet" />
      <auxiliary auxtype="DetNo" auxvalue="15"/>
   </volume>
+  
+  <volume name="photonfront_before_jaw" >
+      <materialref ref="G4_Galactic" />
+      <solidref ref="thin_disc" />
+      <auxiliary auxtype="SensDet" auxvalue="planeDet" />
+     <auxiliary auxtype="DetNo" auxvalue="19"/>
+  </volume>
+
 
   <volume name="Photonfront_before_shield" >
       <materialref ref="G4_Galactic" />
@@ -284,12 +299,24 @@
         <volumeref ref="Third_vp" />
         <position unit="mm" x="0" y="215" z="7800" />
       </physvol>
+      
+      <physvol name="before_vaccum_window_phy">
+        <volumeref ref="before_vaccum_window" />
+        <position unit="mm" x="0" y="0" z="5522" />
+      </physvol>
+
+      <physvol name="Photonfront_before_jaw_phy">
+        <volumeref ref="photonfront_before_jaw" />
+        <position unit="mm" x="0" y="0" z="5564+704.125-406-79.325-2-54.125-1.25*25.4-28" />
+      </physvol>
 
       <physvol name="Photonfront_before_shield_phy">
         <volumeref ref="Photonfront_before_shield" />
         <!--<position unit="mm" x="0" y="0" z="5564+298.125-119.025+38.1" />-->
-        <position unit="mm" x="0" y="0" z="5564+704.125-406-79.325-2-54.125+7.5" />
+        <position unit="mm" x="0" y="0" z="5564+704.125-406-79.325-2-54.125+7.5-14" />
       </physvol>
+
+
 
       <physvol name="Photonfront_after_shield_phy">
         <volumeref ref="Photonfront_after_shield" />
