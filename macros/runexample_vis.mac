@@ -22,8 +22,8 @@
 #/vis/scene/add/magneticField 10
 
 # valve out
-/compton/geometry/relative_position gate_valve_phy (40.0,40.0,0.0)
-
+#/compton/geometry/relative_position gate_valve_phy (40.0,40.0,0.0)
+/compton/geometry/relative_position gate_valve_phy (0.0,-69.9,0.0)
 
 /compton/evgen/set beam
 /compton/evgen/beam/origin 0 215.49 -9849.76 mm
@@ -43,7 +43,7 @@
 /compton/filename comptonout2.root
 /compton/seed 42
 
-#/run/beamOn 2
+#/run/beamOn 1000
 
 /vis/enable
 /vis/viewer/flush
