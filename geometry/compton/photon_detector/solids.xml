@@ -31,7 +31,7 @@
 <box lunit="mm" name="tungsten_fingers_scintillator_solid" x="shields_dimX" y="shields_dimY" z="10" />
 
 <box lunit="mm" name="lead_tungstate_det_solid" x="30" y="30" z="200" />
-<box lunit="mm" name="lead_shield" x="shields_dimX+5" y="shields_dimY+5" z="7.5" />
+<box lunit="mm" name="lead_shield" x="shields_dimX+5" y="shields_dimY+5" z="15" />
 <box lunit="mm" name="shields_solid" x="shields_dimX" y="shields_dimY" z="shields_dimZ" />  
 <!-- <box lunit="mm" name="styrofoam" x="shields_dimX" y="shields_dimY" z="Cover_to_shield_dimZ-38.1" /> -->
 <box lunit="mm" name="styrofoam" x="shields_dimX" y="shields_dimY" z="Cover_to_shield_dimZ" />
