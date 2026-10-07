@@ -37,7 +37,7 @@
 <variable name="jaw_dimY" value="1.25*25.4"/>
 <variable name="jaw_dimZ" value="1.25*25.4"/>
 <variable name="jaw_to_fingers" value="54.125"/>
-<variable name="jawY_pos" value="jaw_dimY/2.+10.0"/>
+<variable name="jawY_pos" value="jaw_dimY/2.+5.0"/>
 
 <variable name="tungsten_finger_dimX" value="1" />
 <variable name="tungsten_finger_dimY" value="41" />
