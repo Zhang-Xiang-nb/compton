@@ -36,6 +36,7 @@ class comptonGenCompton : public comptonVEventGen {
     G4double GetRandomRho();
     void SamplePhysics(comptonVertex *, comptonEvent *);
     double GetCrossSection(double rho);
+    double GetAsym(double rho);
     double GetRate(double rho);
     const double GetLuminosity();
     void Initialize();

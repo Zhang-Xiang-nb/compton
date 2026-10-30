@@ -63,6 +63,23 @@ double comptonGenCompton::GetCrossSection(double rho){
     return 2 * CLHEP::pi * r0*r0 * fAParameter*(term1 +1.0 + term3*term3);
 }
 
+double comptonGenCompton::GetAsym(double rho){
+    double  E = fElectronEnergy;
+    //double m = CLHEP::electron_mass_c2;
+    auto r0 = CLHEP::classic_electr_radius;
+    G4double a = fAParameter;
+    G4double am1 = a - 1.0;
+    G4double ap1 = a + 1.0;
+    //double k1 = 4*flaserEnergy*a*E*E/(CLHEP::electron_mass_c2*CLHEP::electron_mass_c2+a*theta0*theta0*E*E);
+    //G4double kmax = 4*a*fLaserEnergy*(E*E)/(m*m);
+    //double rho = k1/kmax;
+    G4double cross0 = 2*CLHEP::pi*r0*r0*a*(rho*rho*am1*am1/(1.0+rho*am1) + 1.0 + (1.0-rho*ap1)/(1.0+rho*am1)*(1-rho*ap1)/(1.0+rho*am1));
+    G4double crossl = 2*CLHEP::pi*r0*r0*a*(1.0-rho*ap1)*(1.0-1.0/(1.0+rho*am1)/(1.0+rho*am1));
+    if(cross0 == 0) return 0;
+    else
+    return (crossl/cross0);
+}
+
 const double comptonGenCompton::GetLuminosity(){
 
 
@@ -141,9 +158,9 @@ void comptonGenCompton::SamplePhysics(comptonVertex * /*vert*/, comptonEvent *ev
 
     double rate = GetRate(rho);
     double XS = GetCrossSection(rho);
+    double asym = GetAsym(rho);
 
-
-    evt->SetAsymmetry(0.000);
+    evt->SetAsymmetry(asym);
     evt->SetThCoM(0.0000);
     evt->SetEffCrossSection(XS);
     evt->SetRate(rate); // see the rate here is in Geant4 units, writing takes care of proper unit
