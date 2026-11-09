@@ -98,8 +98,8 @@ std::vector<comptonEventParticle_t> comptonEvent::GetEventParticleIO() const {
 comptonEvent_t comptonEvent::GetEventIO() const {
   comptonEvent_t ev;
   ev.xs = fEffXs/microbarn;
-  ev.A  = fAsym/ppb;
-  ev.Am = fmAsym/ppb;
+  ev.A  = fAsym;
+  ev.Am = fmAsym;
   ev.Q2 = fQ2;
   ev.W2 = fW2;
   ev.thcom = fThCoM;

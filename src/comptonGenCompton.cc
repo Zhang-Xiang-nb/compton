@@ -64,7 +64,7 @@ double comptonGenCompton::GetCrossSection(double rho){
 }
 
 double comptonGenCompton::GetAsym(double rho){
-    double  E = fElectronEnergy;
+    //double  E = fElectronEnergy;
     //double m = CLHEP::electron_mass_c2;
     auto r0 = CLHEP::classic_electr_radius;
     G4double a = fAParameter;
@@ -75,9 +75,7 @@ double comptonGenCompton::GetAsym(double rho){
     //double rho = k1/kmax;
     G4double cross0 = 2*CLHEP::pi*r0*r0*a*(rho*rho*am1*am1/(1.0+rho*am1) + 1.0 + (1.0-rho*ap1)/(1.0+rho*am1)*(1-rho*ap1)/(1.0+rho*am1));
     G4double crossl = 2*CLHEP::pi*r0*r0*a*(1.0-rho*ap1)*(1.0-1.0/(1.0+rho*am1)/(1.0+rho*am1));
-    if(cross0 == 0) return 0;
-    else
-    return (crossl/cross0);
+    return crossl/cross0;
 }
 
 const double comptonGenCompton::GetLuminosity(){
